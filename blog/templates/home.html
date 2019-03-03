@@ -1,0 +1,368 @@
+{% extends "./layout.html" %}
+{% load staticfiles %}
+{% block title %} 나는 홈 {% endblock %}
+
+<body>
+{% block contents %}
+
+<style>
+    /* Reset */
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+    address, big, cite, code, del, dfn, em, font, img, ins,
+    q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+    u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: none 0;}
+    caption {text-indent:-10000px;}
+    html { font-size: 10px; }
+    html, body {margin: 0; padding: 0; width: 100%; height: 100%;}
+    body {background-color:#fff; color:#000; font-weight: 400; font-family:"Noto Sans KR", Sans-serif;}
+    input, button, textarea {font-family: inherit; font-size:1.2rem; color:#000;}
+    h1, h2, h3, h4, h5, h6 {letter-spacing: 0; font-weight:normal;}
+    img, fieldset, iframe {border:0 none;}
+    table {border-collapse: collapse;}
+    select, textarea {font-family: inherit; border: 1px solid #B7B6B6; background: #FFFFFF; color: #7c7c7c; font-size: 12px; font-size: 1.2rem; vertical-align: middle;}
+    textarea {overflow:auto;}
+    select, input, img, li {vertical-align: middle; text-align:inherit;}
+    address, caption, cite, code, dfn, em, strong, th, var {font-style : normal; font-weight : 900;}
+    ul, li, ol {list-style-type: none;}
+    legend,  caption {display: none;}
+    hr {border-collapse:collapse; margin: 0; border: none;}
+    a:link, a:visited {text-decoration:none; color:inherit;}
+    a:hover {text-decoration:none;}
+    input[type="button"] {-webkit-appearance: none;}
+
+
+
+
+    @font-face {
+        font-family: 'jeju';
+        src: url("img/BMJUA_ttf.ttf");
+    }
+    *{font-family: 'jeju' }
+    .img_con{position: relative; height: 640px; margin-bottom: 50px;}
+    .bg_img{position: absolute; width: 100%; height: 540px;}
+    .title{font-size:60px;}
+    .content{font-size:20px; text-align: center;}
+    .team{margin-bottom: 80px; position: relative;}
+    .team.line{padding-top: 50px; padding-bottom: 50px; width: 550px;}
+    .line_bo:after{content:""; position: absolute; border-left:2px solid rgba(0,0,0,0.7); width: 2px; height: 50px;
+        bottom: 20px; left:50%;}
+    .line_bo:last-child:after{display: none;}
+    .intro{font-size:60px; text-align: center;}
+    .team_img{width:250px; height:250px; border: 2px solid #f7941e; border-radius: 50%;}
+    .name_title{font-size:30px;}
+    .name_content{font-size:20px; text-align: center;}
+    section{padding-bottom: 100px; border-bottom: 1px solid #4e4e4e; margin-bottom: 100px;}
+    section:last-child{padding-bottom: 0; margin-bottom: 50px; border:none;}
+    .img_box{display: block; margin-bottom: 30px;}
+    .img_box .img{width: 200px; height: 200px;}
+    .circle{display: inline-block; border:1px solid #000; border-radius: 50%; text-align: center; }
+    .btn{background-color: #f7941e; border-radius: 10px; padding-top: 10px; padding-bottom: 10px; padding-right: 20px; padding-left: 20px;
+          color:#fff !important;}
+    .btn:hover{background-color: #f77609;}
+    .font-footer{font-size:20px; color:#fff;}
+    .point_color{color:#f7941e}
+    .footer_img{width: 150px; height: 150px; margin-bottom: 20px; border-radius: 50%;}
+    .footer_img_desc{color:#fff; font-size:15px;}
+    .col-12 {width: 100%;}
+    .col-6{width: 50%;}
+    .col-4{width: 33.33%;}
+    [class*="col-"] {
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+    }
+
+    [class*="col-"] img {
+        max-width: 100%;
+    }
+    .col-center {float: none; margin-left:auto; margin-right: auto;}
+    .mw-1200 {max-width: 1200px;}
+    .pr15{ padding-right: 15px; }
+    .pl15{padding-left: 15px;}
+    .mb30{margin-bottom: 30px;}
+    .mb80{margin-bottom: 80px;}
+    .tc{text-align: center;}
+    .mb20{margin-bottom: 20px;}
+    .mb50{margin-bottom: 50px;}
+    .pr30{padding-right: 30px;}
+    .pl30{padding-left:30px;}
+</style>
+
+
+<div class="wrapper">
+    <div class="img_con">
+        <img class="bg_img" src="{% static 'bg_brand.jpg' %}" alt="">
+    </div>
+
+    <div class="col-12 col-center mw-1200">
+        <div class="col-12 col-center pr15 pl15">
+            <section class="col-12 ">
+                <div class="title tc mb30">
+                    <span class="point_color">우리는?</span>
+                </div>
+
+                <div class="content">
+                    멋쟁이 사자처럼 7기 운영진 교육을 이수하고 있는 강남팀 입니다.<br>
+                    총 4명(김태완,한민지,구자룡,김상열)로 구성 되어있습니다.<br>
+                    7주간에 스터디 동안 DJango 뿐 아니라 다양한 분야로 스터디를 진행 하였고 스터디 내용을 소개 하고자 합니다.<br>
+                    저희가 공부한 분야는 Django , CSS , JS , DOCKER이며 매주 발표자를 달리하여 서로 보완 및 공부를 하였습니다.
+                </div>
+            </section>
+
+            <section class="col-12">
+                <div class="col-12">
+                    <div class="intro mb80">
+                        <span class="point_color">팀원 소개</span>
+                    </div>
+
+                    <div class="col-12 team">
+                        <div class="col-12 col-6">
+                            <div class="tc">
+                                <a href="https://www.instagram.com/loadstorestock/" target="_blank"><img class="team_img mb30" src="{% static 'pr.png' %}"  alt=""></a>
+                            </div>
+
+                            <div class="name_title mb30 tc">
+                                <span class="point_color">팀장 김태완(홍대 멋사)</span>
+                            </div>
+
+                            <div class="name_content pr30 pl30">
+                                강남팀에 팀장으로 VR과 AR에 능통한 능력자이다.<br>
+                                강남팀에 팀장 답게 추진력이 강하고 영어를 포함한 다양한 언어와 프로그래밍에 능하다.<br>
+                                특히 JS에 대한 이해도가 높아 JS에 대한 강의를 세션에 하여 벽돌깨기를 JS로 구현 하는 특강을 진행 하였다.<br>
+                                또한 200만원이 넘는 맥북에 소유자이다.
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="tc">
+                                <a href="https://www.instagram.com/mz_011" target="_blank"><img class="team_img mb30" src="{% static 'ap.png' %}" alt=""></a>
+                            </div>
+
+                            <div class="name_title mb30 tc">
+                                <span class="point_color">한민지(외대 서울 멋사)</span>
+                            </div>
+
+                            <div class="name_content pr30 pl30">
+                                강남팀에서 유일한 완전한 비전공자로 주전공은 중국어이다.<br>
+                                비전공자임에도 불구하고 리눅스 어셈블리어 알고리즘 등 컴퓨터에 대한 전반적인 지식에 능통하다.<br>
+                                한국어 뿐 아니라 중국어 영어 등 3개국어를 할 수 있는 능력자이다<br>
+                                다양한 알고리즘 구현 세션을 진행 하였다.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="col-6">
+                            <div class="tc">
+                                <a href="https://www.facebook.com/twysg" target="_blank"><img class="team_img mb30" src="{% static 'tube.png' %}" alt=""></a>
+                            </div>
+
+                            <div class="name_title mb30 tc">
+                                <span class="point_color">김상열(강원대 멋사)</span>
+                            </div>
+
+                            <div class="name_content pr30 pl30">
+                                강남팀에서 AWS , DOCKER 등 신지식에 가장 능통한 능력자이다.<br>
+                                비전공자로 AWS , DOCKER 뿐 아니라 RUBY ON RAILS , JS 등 다방면에 언어에 능통하다<BR>
+                                특히 이전에도 docker를 많은 사람 앞에서 강의한 경력이 있고 이를 활용하여 docker 세션을 진행 하였다<br>
+                                강남팀에서 스터디룸 예약을 성실히 수행하였다.
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="tc">
+                                <a href="https://www.instagram.com/jarung2/" target="_blank"><img class="team_img mb30" src="{% static 'ryan.png' %}" alt=""></a>
+                            </div>
+
+                            <div class="name_title mb30 tc">
+                                <span class="point_color">구자룡(외대 글로벌 멋사)</span>
+                            </div>
+
+                            <div class="name_content pr30 pl30">
+                                강남팀에서 유일하게 졸업을 하고 웹개발자로 취업을 한 직장인이다.<br>
+                                전기전자를 전공하여 반전공자 이며  HTML과 CSS JS SPRING 등 웹개발 언어에 능통하다<BR>
+                                특히 CSS를 다른 팀원 보다 능숙하여 부트 스트랩이 아닌 순수 CSS로 PARK 만들기 세션을 진행 하였다<BR>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="col-12">
+                <div class="title tc mb50">
+                    <span class="point_color">우리가 진행한 세션은요?</span>
+                </div>
+
+                <div class="col-12">
+                    <div class="col-12 tc">
+                        <div class="col-12 line_bo">
+                            <div class="circle team line">
+                                <div class="name_title mb30">
+                                    <span class="point_color">1주차</span>
+                                </div>
+
+                                <a class="img_box" href="" class="mb30">
+                                    <img src="{% static 'python-1.png' %}" alt="">
+                                </a>
+
+                                <div class="name_content mb30">
+                                    각자 소개 및 파이썬 정리<br>
+                                    앞으로의 스터디 방향성을 정립하고<br>
+                                    모임의 목적 및 시간을 확립함<br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 line_bo">
+                            <div class="circle team line">
+                                <div class="name_title mb30">
+                                    <span class="point_color">2주차</span>
+                                </div>
+
+                                <a class="img_box" href="" class="mb30">
+                                    <img class="img" src="{% static 'css.png' %}" alt="">
+                                </a>
+
+                                <div class="name_content mb30">
+                                    CSS 내용에 대한 이론 교육 및학습<br>
+                                    이론을 활용한 예제를 학습함<br><br>
+                                    진행자 : 구자룡<br><br>
+                                    <a class="btn"href="{% url 'ja' %}">보러가기</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 line_bo">
+                            <div class="circle team line">
+                                <div class="name_title mb30">
+                                    <span class="point_color">3주차</span>
+                                </div>
+
+                                <a class="img_box" href="" class="mb30">
+                                    <img class="img" src="{% static 'alg.png' %}" alt="">
+                                </a>
+
+                                <div class="name_content mb30">
+                                    알고리즘에 대한 이론을 실습함<br>
+                                    DP BACKTRACKING 등 문제 풀이<br><br>
+                                    진행자 : 한민지<br><br>
+                                    <a class="btn"href="{% url 'minji' %}">보러가기</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 line_bo">
+                            <div class="circle team line">
+                                <div class="name_title mb30">
+                                    <span class="point_color">4 ~ 5주차</span>
+                                </div>
+
+                                <a class="img_box" href="" class="mb30">
+                                    <img class="img" src="{% static 'JS.png' %}" alt="">
+                                </a>
+
+                                <div class="name_content mb30">
+                                    JS를 이용한 이론 학습<br>
+                                    이론을 활용한 벽돌 부수기 제작<br>
+                                    진행자 : 김태완<br><br>
+                                    <a class="btn"href="{% url 'taewan' %}">보러가기</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 line_bo">
+                            <div class="circle team line">
+                                <div class="name_title mb30">
+                                    <span class="point_color">6 ~ 7 주차</span>
+                                </div>
+
+                                <a class="img_box" href="" class="mb30">
+                                    <img class="img" src="{% static 'DO.png' %}" alt="">
+                                </a>
+
+                                <div class="name_content mb30">
+                                    AWS 및 도커 이론 학습<br>
+                                    배운 이론을 활용한 예제 및 실습<br>
+                                    진행자 : 박상열<br><br>
+                                    <a class="btn"href="{% url 'sy' %}">보러가기</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="col-12" style="background-color: #999; padding-top: 100px; padding-bottom: 100px;">
+        <div class="col-12 tc mb50">
+            <div class="col-12 tc">
+                <div class="mb20">
+                    <img src="{% static 'likelion_logo.png' %}" alt="" style="width: 250px; height: 200px;">
+                </div>
+                <span class="font-footer mb20">멋쟁이 사자처럼 - <span class="point_color">HACK YOUR LIFE</span></span>
+                <div class="footer_img_desc">
+                    Special Thanks TO LIKE LION
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-center mw-1200">
+            <div class="col-12 pr15 pl15">
+                <div class="col-12 mb80">
+                    <div class="col-4 tc">
+                        <div class="">
+                            <a href="https://www.facebook.com/LikelionHongik" target="_blank"><img class="footer_img" src="{% static 'hong.jpg' %}" alt=""></a>
+                        </div>
+
+                        <div class="footer_img_desc">
+                            With 홍익대학교
+                        </div>
+                    </div>
+                    <div class="col-4 tc">
+                        <div class="">
+                            <a href="https://www.facebook.com/likelionhufs/" target="_blank"><img class="footer_img" src="{% static 'hufs.png' %}" alt=""></a>
+                        </div>
+                        <div class="footer_img_desc">
+                            With 한국외국어대학교
+                        </div>
+                    </div>
+                    <div class="col-4 tc">
+                        <div class="">
+                            <a href="https://www.facebook.com/likelionkangwon/" target="_blank"><img class="footer_img" src="{% static 'gang.png' %}" alt=""></a>
+                        </div>
+                        <div class="footer_img_desc">
+                            With 강원대학교
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+</div>
+
+{% endblock %}
+</body>

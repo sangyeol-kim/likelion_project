@@ -1,0 +1,39 @@
+{% extends "../layout.html" %}
+{% load staticfiles %}
+{% block title %} 나는 디테일 {% endblock %}
+
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&amp;subset=korean" rel="stylesheet">
+</head>
+
+<body>
+{% block contents %} 
+    <style>
+        p {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 23px;
+        }
+        
+        h1, h4, a {
+            font-family: 'East Sea Dokdo', cursive;
+            font-size: 35px;
+        }
+        #box1 { text-align: center; }
+    </style>
+        <div id="box1">
+            <h1>BACKTRACKING ALGORITHM</h1>
+            
+            <img src="{% static 'threee.gif' %}" style="height:300px; width:300px;" alt="">
+            <br><br>
+            <h4>백트레킹 문제 해결법</h4>
+            <p>문제가 한정 되어있을 경우, 모든 조합을 시도해서 문제의 해를 찾음</p>
+            <p>각 경우의 수에서 가망이 없다는 조건에 걸리면, 부모 노드로 되돌아간다.</p>
+            <br><br>
+            <a href = "https://www.acmicpc.net/problem/9663"> 대표적인 백트레킹 문제: N-Queen</a>
+            <br><br><br><br>
+            <a>made by 한민지<a><br>
+            <a href="https://github.com/jhn5052?tab=repositories">github : https://github.com/jhn5052?tab=repositories</a>
+        </div>
+{% endblock %}
+</body>

@@ -1,0 +1,32 @@
+{% extends "../layout.html" %}
+{% load staticfiles %}
+{% block title %} 김상열 {% endblock %}
+
+<body>
+{% block contents %} 
+  <div class="container" style="text-align:center; margin-top:3px;">
+    
+    <h1>강원대학교 김상열</h1>
+    <p>스터디 내용: Docker 입문
+
+        <h4>목차</h4>
+        <div class="alert alert-primary" role="alert">
+        목차를 클릭하시면 실습 페이지로 이동합니다.
+        </div>
+        <ui>
+            <li><a href="https://github.com/sangyeol-kim/ausg-docker-seminar/tree/master/1.Docker">Docker 이론</a></li>
+            <li><a href="https://github.com/sangyeol-kim/ausg-docker-seminar/blob/master/2.Jenkins/README.md">Jenkins를 통한 CI/CD</a></li>
+            <li><a href="https://github.com/sangyeol-kim/ausg-docker-seminar/blob/master/3.AWS_ECS/README.md">AWS ECS를 통한 오케스트레이션</a></li>
+        </ui>
+    </p>
+
+    <img src="{% static 'one.jpg' %}" style="height:300px; width:300px;" alt="">
+    <img src="{% static 'two.JPG' %}" style="height:300px; width:300px;" alt="">
+
+    <br>
+    <a href="https://github.com/sangyeol-kim/ausg-docker-seminar" class="btn btn-light">자세히보기</a>
+    <a href="{% url 'home' %}" class="btn btn-light">돌아가기</a>
+    <br>
+  </div>
+{% endblock %}
+</body>
